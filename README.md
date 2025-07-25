@@ -23,7 +23,7 @@ At a high level, these folders make up the `github.com/oneanupam/app-repo-templa
 - [`helm-overrides/`](./helm-overrides) - This folder contains the override files to pass to variables declared in helm charts.
 - [`src/`](./src) - This folder contains the application code or scripts.
 - [`.pre-commit-config.yaml`](.pre-commit-config.yaml) - This file contains the plugin configuration for pre-commit.
-- [`.editorconfig/`](.editorconfig) - This file has the configuration for the editorconfig plugin.
+- [`.editorconfig`](.editorconfig) - This file has the configuration for the editorconfig plugin.
 
 ## How to run pre-commit
 Run the below commnad from the git repo root to set up the git hook scripts into your git hooks. It will be installed at .git/hooks/pre-commit
