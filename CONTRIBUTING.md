@@ -29,7 +29,7 @@ Format: [Commit Type] Short Summary
 
 ```
 Ex: Suppose, You added some functionality. So, the title could be -
-    [feat] added function to read input from user
+    [feat] add function to read input from user
 ```
 
 ### Coding Guidelines
