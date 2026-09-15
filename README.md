@@ -4,6 +4,8 @@ A ready-to-use template repository for quickly bootstrapping new projects.
 
 ## Prerequisites
 
+Install the required tools before contributing to this project:
+
 - [pre-commit](https://pre-commit.com/) >= 4.2.0
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) >= v1.30.5
 - [helm](https://helm.sh/) >= 3.13.1
@@ -25,28 +27,36 @@ At a high level, these folders make up the `github.com/oneanupam/app-repo-templa
 - [`.pre-commit-config.yaml`](.pre-commit-config.yaml) - This file contains the plugin configuration for pre-commit.
 - [`.editorconfig`](.editorconfig) - This file has the configuration for the editorconfig plugin.
 
-## How to run pre-commit
-Run the below commnad from the git repo root to set up the git hook scripts into your git hooks. It will be installed at .git/hooks/pre-commit
+## Run pre-commit
+This repository already includes a `.pre-commit-config.yaml`. Run the following commands to install the hooks locally:
 
 ```bash
+python -m pip install pre-commit
 pre-commit install
+pre-commit validate-config
 ```
 
-now pre-commit will run automatically on git commit. Usually, it runs only for the changed files. Its good to run the hooks against all the files when adding new hooks. To manually run all pre-commit hooks on a repo, use below -
+This installs the hook into `.git/hooks/pre-commit`. Once installed, pre-commit runs automatically when you commit changes. By default, it checks only the files included in the commit.
+
+To run all hooks manually, use:
 
 ```bash
-# to run hooks on all files
 pre-commit run --all-files
-
-# to run individual hook
 pre-commit run <hook_id>
 ```
 
-Once you have pre-commit installed, adding pre-commit plugins to your project is done with the .pre-commit-config.yaml configuration file. You can generate a very basic configuration using `pre-commit sample-config`. Every time you clone a project using pre-commit running pre-commit install should always be the first thing you do.
+> [!NOTE]
+> If you need a starter config for another project, use `pre-commit sample-config`.
 
 ## Contributing
 
-Contributions are welcome! Please open issues or submit pull requests for improvements or new suggestions. Read the [contributing.md](CONTRIBUTING.md) before starting.
+Contributions and suggestions are welcome. Before opening an issue or pull request:
+
+1. Review the [contribution guidelines](CONTRIBUTING.md).
+2. Install the pre-commit hooks and run them against your changes.
+3. Open an issue for bugs or ideas, or submit a pull request with a clear description of the change.
+
+Please keep contributions focused and follow the repository's formatting and commit message conventions.
 
 ## License
 
