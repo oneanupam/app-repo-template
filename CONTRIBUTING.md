@@ -39,7 +39,11 @@ Examples:
 - Follow the DRY principle and avoid unnecessary duplication.
 
 ## Linting and formatting
-This repository contains configuration for the pre-commit tool, which automates checking linting and formatting during a commit.
+The repository contains configuration for the pre-commit tool to automate linting and formatting checks during a commit. To keep the codebase consistent, use the following tools:
+
+- Bash scripts must be linted with [ShellCheck](https://www.shellcheck.net/).
+- Python files must be formatted and linted with [Ruff](https://docs.astral.sh/ruff/).
+- Terraform configuration files must be formatted with `terraform fmt`.
 
 ## Reporting bugs
 We use GitHub Issues to track bugs. Please open a new issue to report a problem or unexpected behavior.
