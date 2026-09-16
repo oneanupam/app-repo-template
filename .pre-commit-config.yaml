@@ -2,16 +2,32 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
+      # --- SECURITY & REPOSITORY PROTECTION ---
       - id: no-commit-to-branch
+        description: Prevents accidental direct commits to main or master
         args: [--branch, main, --branch, master]
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-      - id: check-yaml
       - id: check-added-large-files
+        description: Prevents pushing oversized files
       - id: detect-private-key
+        description: Blocks commits containing unencrypted private keys or secrets
+
+      # --- GENERAL CLEANUP ---
+      - id: trailing-whitespace
+        description: Trim Trailing Whitespace
+      - id: end-of-file-fixer
+        description: Fix End of Files
+
+      # --- SYNTAX VALIDATION ---
+      - id: check-json
+        description: Check JSON Syntax
+      - id: check-yaml
+        description: Check YAML Syntax
+      - id: check-xml
+        description: Check XML Syntax
+        
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.4
+    rev: v8.24.2
     hooks:
       - id: gitleaks
