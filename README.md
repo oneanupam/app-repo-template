@@ -45,9 +45,6 @@ pre-commit run --all-files
 pre-commit run <hook_id>
 ```
 
-> [!NOTE]
-> If you need a starter config for another project, use `pre-commit sample-config`.
-
 ## Contributing
 
 Contributions and suggestions are welcome. Before opening an issue or pull request:
@@ -55,8 +52,6 @@ Contributions and suggestions are welcome. Before opening an issue or pull reque
 1. Review the [contribution guidelines](CONTRIBUTING.md).
 2. Install the pre-commit hooks and run them against your changes.
 3. Open an issue for bugs or ideas, or submit a pull request with a clear description of the change.
-
-Please keep contributions focused and follow the repository's formatting and commit message conventions.
 
 ## License
 
