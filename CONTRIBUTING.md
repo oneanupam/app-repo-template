@@ -22,16 +22,16 @@ Use a commit format that includes a commit type and a clear summary, with an opt
 ```bash
 Examples:
   docs: update readme file
-  feat: add application dockerfile
+  build: add application dockerfile
 ```
 
 ### Pull request guidelines
-Use a title in the format: [Commit Type] Short Summary
+Use a title in the format: Commit Type: [TKT-NNN] Short Summary
 
 ```bash
 Examples:
-  [feat] add input parsing for user data
-  [fix] resolve VPC subnet configuration issue
+  feat: kzb-04 add input parsing for user data
+  fix: kzb-09 resolve VPC subnet configuration issue
 ```
 
 ### Coding guidelines
